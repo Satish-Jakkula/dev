@@ -1,38 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlElement" class="">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Satish Jakkula - Data Scientist Portfolio | NLP | GenAI | Time Series | AI Solutions">
-  <meta name="keywords" content="Data Scientist, NLP, GenAI, Portfolio, Azure, Python, TensorFlow">
-  <meta name="author" content="Satish Jakkula">
-  <meta property="og:title" content="Satish Jakkula | Data Scientist Portfolio">
-  <meta property="og:description" content="Explore Satish's work in NLP, GenAI, and ML with real-world project showcases.">
-  <meta property="og:image" content="profile1.jpg">
-  <title>Satish Kumar Jakkula | Data Scientist</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Satish Jakkula | Data Scientist</title>
+
+  <!-- SEO & OpenGraph -->
+  <meta name="description" content="Satish Jakkula - Data Scientist Portfolio">
+  <meta property="og:title" content="Satish Jakkula | Data Scientist">
+  <meta property="og:image" content="https://satish-jakkula.github.io/dev/profile1.jpg">
+  <meta property="og:description" content="Explore NLP, GenAI, and ML projects.">
+  <meta property="og:url" content="https://satish-jakkula.github.io/dev/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ✅ TailwindCSS with class-based dark mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+
+  <!-- ✅ Dark Mode Toggle Script -->
+  <script>
+    // Apply theme on load
+    window.onload = function () {
+      const darkPref = localStorage.getItem("theme");
+      if (darkPref === "dark") {
+        document.getElementById("htmlElement").classList.add("dark");
+      }
+    };
+    // Toggle and store
     function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
+      const el = document.getElementById("htmlElement");
+      el.classList.toggle("dark");
+      localStorage.setItem("theme", el.classList.contains("dark") ? "dark" : "light");
     }
   </script>
+
+  <!-- Styling -->
   <style>
-    .hover-scale:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+    .hover-scale {
+      transition: all 0.3s ease-in-out;
+    }
+    .hover-scale:hover {
+      transform: scale(1.08);
+    }
   </style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
-  <button onclick="toggleDarkMode()" class="fixed top-4 right-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm rounded hover-scale">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+  <!-- 🌗 Toggle Button -->
+  <button onclick="toggleDarkMode()" class="fixed top-4 right-4 px-4 py-2 bg-gray-300 dark:bg-gray-700 text-sm rounded shadow hover-scale z-50">
     🌗 Toggle Theme
   </button>
 
+  <!-- Hero Section -->
   <div class="flex flex-col items-center justify-center min-h-screen text-center px-6 py-16 space-y-12">
 
     <img src="profile1.jpg" alt="Satish Jakkula"
-         class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-gray-300 shadow-lg object-cover hover-scale"/>
+         class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-gray-300 dark:border-white shadow-lg object-cover hover-scale" />
 
-    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight">Satish Jakkula</h1>
-    <p class="text-3xl sm:text-4xl text-gray-700 dark:text-gray-300 font-medium">Data Scientist | NLP | GenAI | Time Series</p>
+    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight">Satish Kumar Jakkula</h1>
+
+    <p class="text-3xl sm:text-4xl text-gray-700 dark:text-gray-300 font-medium">
+      Data Scientist | NLP | GenAI | Time Series
+    </p>
 
     <p class="max-w-3xl text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed px-4">
       With 3+ years of experience in Machine Learning, NLP, Time Series Forecasting, and GenAI,
@@ -40,14 +74,14 @@
     </p>
 
     <div class="flex flex-wrap justify-center gap-6 text-xl sm:text-2xl text-blue-700 dark:text-blue-400 font-semibold pt-4">
-      <a href="about.html" class="hover:underline hover-scale">About</a>
-      <a href="projects.html" class="hover:underline hover-scale">Projects</a>
-      <a href="resume.html" class="hover:underline hover-scale">Resume</a>
-      <a href="contact.html" class="hover:underline hover-scale">Contact</a>
-      <a href="https://github.com/Satish-Jakkula" target="_blank" class="hover:underline hover-scale">GitHub</a>
-      <a href="https://linkedin.com/in/jakkula-satish-kumar" target="_blank" class="hover:underline hover-scale">LinkedIn</a>
+      <a href="about.html" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">About</a>
+      <a href="projects.html" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">Projects</a>
+      <a href="resume.html" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">Resume</a>
+      <a href="contact.html" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">Contact</a>
+      <a href="https://github.com/Satish-Jakkula" target="_blank" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">GitHub</a>
+      <a href="https://linkedin.com/in/jakkula-satish-kumar" target="_blank" class="hover:underline hover:text-blue-500 dark:hover:text-blue-300 transition hover-scale">LinkedIn</a>
     </div>
-
   </div>
+
 </body>
 </html>
