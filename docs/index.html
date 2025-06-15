@@ -1,20 +1,53 @@
-<body class="bg-white text-gray-800">
-  <section class="text-center p-8">
-    
-    <!-- 👤 Profile Photo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Satish Jakkula - Data Scientist Portfolio | NLP | GenAI | Time Series | AI Solutions">
+  <meta name="keywords" content="Data Scientist, NLP, GenAI, Portfolio, Azure, Python, TensorFlow">
+  <meta name="author" content="Satish Jakkula">
+  <meta property="og:title" content="Satish Jakkula | Data Scientist Portfolio">
+  <meta property="og:description" content="Explore Satish's work in NLP, GenAI, and ML with real-world project showcases.">
+  <meta property="og:image" content="profile1.jpg">
+  <title>Satish Kumar Jakkula | Data Scientist</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <style>
+    .hover-scale:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <button onclick="toggleDarkMode()" class="fixed top-4 right-4 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm rounded hover-scale">
+    🌗 Toggle Theme
+  </button>
+
+  <div class="flex flex-col items-center justify-center min-h-screen text-center px-6 py-16 space-y-12">
+
     <img src="profile1.jpg" alt="Satish Jakkula"
-     class="w-24 sm:w-28 md:w-32 h-auto mx-auto rounded-full border-2 border-gray-300 mb-4 shadow-sm object-cover" />
+         class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-gray-300 shadow-lg object-cover hover-scale"/>
 
-    <h1 class="text-4xl font-bold">Satish Jakkula</h1>
-    <p class="text-xl mt-2 text-gray-600">Data Scientist | NLP | GenAI | Time Series</p>
-    <p class="mt-4">💼 3+ years of experience in building and deploying ML, NLP & Deep Learning models.</p>
+    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight">Satish Jakkula</h1>
+    <p class="text-3xl sm:text-4xl text-gray-700 dark:text-gray-300 font-medium">Data Scientist | NLP | GenAI | Time Series</p>
 
-    <div class="mt-6 flex justify-center space-x-4">
-      <a href="https://github.com/Satish-Jakkula" class="text-blue-600 hover:underline">GitHub</a>
-      <a href="http://linkedin.com/in/jakkula-satish-kumar" class="text-blue-600 hover:underline">LinkedIn</a>
-      <a href="resume.html" class="text-blue-600 hover:underline">Resume</a>
-      <a href="projects.html" class="text-blue-600 hover:underline">Projects</a>
-      <a href="contact.html" class="text-blue-600 hover:underline">Contact</a>
+    <p class="max-w-3xl text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed px-4">
+      With 3+ years of experience in Machine Learning, NLP, Time Series Forecasting, and GenAI,
+      I specialize in building real-world AI solutions using Python, Scikit-Learn, TensorFlow, and Azure.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6 text-xl sm:text-2xl text-blue-700 dark:text-blue-400 font-semibold pt-4">
+      <a href="about.html" class="hover:underline hover-scale">About</a>
+      <a href="projects.html" class="hover:underline hover-scale">Projects</a>
+      <a href="resume.html" class="hover:underline hover-scale">Resume</a>
+      <a href="contact.html" class="hover:underline hover-scale">Contact</a>
+      <a href="https://github.com/Satish-Jakkula" target="_blank" class="hover:underline hover-scale">GitHub</a>
+      <a href="https://linkedin.com/in/jakkula-satish-kumar" target="_blank" class="hover:underline hover-scale">LinkedIn</a>
     </div>
-  </section>
+
+  </div>
 </body>
+</html>
